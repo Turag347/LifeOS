@@ -28,7 +28,7 @@ android {
 
     sourceSets {
         getByName("main") {
-            manifest.srcFile("app/src/main/AndroidManifest.xml")
+            manifest.srcFile("src/main/AndroidManifest.xml")
         }
     }
 }
