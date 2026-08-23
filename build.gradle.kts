@@ -17,13 +17,19 @@ android {
     }
 
     buildTypes {
-        release { 
-            isMinifyEnabled = false 
+        release {
+            isMinifyEnabled = false
         }
     }
 
-    buildFeatures { 
-        compose = true 
+    buildFeatures {
+        compose = true
+    }
+
+    sourceSets {
+        getByName("main") {
+            manifest.srcFile("app/src/main/AndroidManifest.xml")
+        }
     }
 }
 
