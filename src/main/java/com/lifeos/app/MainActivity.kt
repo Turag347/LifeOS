@@ -6,9 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -67,7 +64,6 @@ fun LifeOSDashboard() {
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            // Summary Card
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
@@ -86,7 +82,6 @@ fun LifeOSDashboard() {
                 }
             }
 
-            // Input Area
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -107,11 +102,10 @@ fun LifeOSDashboard() {
                         }
                     }
                 ) {
-                    Icon(Icons.Default.Add, contentDescription = "Add")
+                    Text("+ Add")
                 }
             }
 
-            // Task List
             Text("Your Tasks", fontSize = 20.sp, fontWeight = FontWeight.Bold)
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
